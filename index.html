@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagui Studio - Platform Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <header class="game-header">
+            <div class="logo">SAGUI<span>STUDIO</span></div>
+            <div class="hud">
+                <div class="coin-counter">
+                    <div class="coin-icon"></div>
+                    <span id="coinCount">0</span>
+                </div>
+                <div class="lives-counter">
+                    <span class="label">VIDAS</span>
+                    <span id="livesCount">3</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="canvas-container">
+            <canvas id="gameCanvas" width="960" height="540"></canvas>
+            
+            <div id="startScreen" class="overlay">
+                <h1 class="title">SAGUI <span>ADVENTURE</span></h1>
+                <p class="subtitle">Colete todas as moedas!</p>
+                <div class="controls-info">
+                    <div class="control-item"><kbd>←</kbd><kbd>→</kbd> Mover</div>
+                    <div class="control-item"><kbd>Espaço</kbd> Pular</div>
+                    <div class="control-item"><kbd>Shift</kbd> Correr</div>
+                </div>
+                <button id="startBtn" class="play-btn">JOGAR</button>
+            </div>
+
+            <div id="gameOverScreen" class="overlay hidden">
+                <h1 class="title">FIM DE JOGO</h1>
+                <p class="subtitle">Moedas coletadas: <span id="finalCoins">0</span></p>
+                <button id="restartBtn" class="play-btn">JOGAR NOVAMENTE</button>
+            </div>
+
+            <div id="winScreen" class="overlay hidden">
+                <h1 class="title">VITÓRIA!</h1>
+                <p class="subtitle">Você coletou todas as moedas!</p>
+                <p class="score">Total: <span id="winCoins">0</span> moedas</p>
+                <button id="winRestartBtn" class="play-btn">JOGAR NOVAMENTE</button>
+            </div>
+        </div>
+
+        <footer class="game-footer">
+            <span>saguistudio.com</span>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
